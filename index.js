@@ -22,7 +22,12 @@ function allClear() {
 }
 
 function equal() {
-  input.textContent = eval(history.textContent);
+  let answer = eval(history.textContent);
+  input.textContent = formatNumber(answer);
   console.log(history.textContent);
   console.log(input.textContent);
+}
+
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
