@@ -16,11 +16,13 @@ buttons.forEach((button) => {
   });
 });
 
+//clears the display
 function allClear() {
   input.textContent = '';
   history.textContent = '';
 }
 
+//evaluate the input
 function equal() {
   let answer = eval(history.textContent);
   input.textContent = formatNumber(answer);
@@ -28,6 +30,7 @@ function equal() {
   console.log(input.textContent);
 }
 
+//formats the number
 function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }

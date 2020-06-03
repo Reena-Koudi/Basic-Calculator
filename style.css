@@ -1,17 +1,29 @@
 .calculator {
+  background: lightGrey;
   width: 350px;
   margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .display {
   width: 100%;
   height: 150px;
+  background-color: #29363b;
+  color: white;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   font-size: 48px;
-  background-color: red;
-  color: white;
+}
+
+.history {
+  color: #717a7d;
+  align-self: flex-end;
+}
+
+.input {
+  align-self: flex-end;
 }
 
 .buttons {
@@ -22,12 +34,30 @@
 .btn-wrapper {
   display: flex;
   width: 75%;
+  background-color: #ec475c;
+}
+
+.btn-clear {
+  background-color: #ec475c;
+}
+
+.btn-save {
+  background-color: #ec475c;
 }
 
 button {
   flex: 1 25%;
   padding: 15px;
   font-size: 1.5em;
-  background-color: blue;
+  border: none;
   color: white;
+  border-top: 1px solid #a8a8a8;
+}
+
+.btn-number {
+  background-color: #f6827a;
+}
+
+.btn-operator {
+  background-color: #f7ba86;
 }
