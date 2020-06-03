@@ -12,3 +12,7 @@ buttons.forEach((button) => {
     display.textContent += buttonValue;
   });
 });
+
+function allClear() {
+  display.textContent = '';
+}
