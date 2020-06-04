@@ -38,7 +38,7 @@ function formatNumber(num) {
 saveButton.addEventListener('click', () => {
   $(document).ready(function () {
     $.ajax({
-      url: 'Calculations.php',
+      url: 'php/Calculations.php',
       type: 'post',
       data: { sum: display.textContent },
       success: function (response) {
