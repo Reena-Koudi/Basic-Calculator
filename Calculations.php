@@ -5,7 +5,7 @@
   $ip_address = $_SERVER['REMOTE_ADDR']; 
 	$browser = $_SERVER['HTTP_USER_AGENT'];
 	$date = date('d-m-Y');
-	$sum = $_POST['sum'];
+	$sum = preg_replace('/\s+/','', $_POST['sum']);;
 	$form_data = array($sum,$ip_address,$date,$browser);
 	$file_open  =fopen('sum.csv','a');
 	$no_rows = count(file("sum.csv"));
@@ -39,7 +39,7 @@
 					       	<th>BROWSER</th>
 								</tr>
 							</thead>
-						<table>'; 
+						<tbody>'; 
 	foreach ($array_data as $ar ){
 			$output .= '<tr>
 						<td>'.$ar[0].'</td>
