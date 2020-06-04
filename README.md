@@ -1,10 +1,12 @@
-## Basic-Calculator
+# Basic-Calculator
 
 A simple calculator with the user history management
 
 # Installation
 
 - Fork this repo, and clone to your local machine.
+
+- I have setup and congigured the webpack. At the moment it doesn't work as expected, hence I have tried running the project on the local php-server.
 
 - Run the php server in your local machine and go to the localhost.
 
@@ -31,3 +33,5 @@ To check the stored sum go to http://localhost:8080/basic-calculator/php/calcula
 - Handling the large inputs and outputs.
 
 - Not allowing the two operators clicked on a go.
+
+- Webpack Configuration to support the project running.
