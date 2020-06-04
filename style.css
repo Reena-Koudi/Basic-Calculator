@@ -13,17 +13,13 @@
   color: white;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
   flex-direction: column;
   font-size: 48px;
 }
 
 .history {
   color: #717a7d;
-  align-self: flex-end;
-}
-
-.input {
-  align-self: flex-end;
 }
 
 .buttons {

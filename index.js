@@ -22,7 +22,7 @@ function allClear() {
   history.textContent = '';
 }
 
-//evaluate the input
+// evaluate the input
 function equal() {
   let answer = eval(history.textContent);
   input.textContent = formatNumber(answer);
