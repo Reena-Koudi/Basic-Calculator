@@ -1,5 +1,5 @@
 <style>
-<?php include 'style.css'; ?>
+<?php include 'css/style.css'; ?>
 </style>
 <?php 
   $ip_address = $_SERVER['REMOTE_ADDR']; 
