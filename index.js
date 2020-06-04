@@ -34,3 +34,17 @@ function equal() {
 function formatNumber(num) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 }
+
+saveButton.addEventListener('click', () => {
+  $(document).ready(function () {
+    $.ajax({
+      url: 'Calculations.php',
+      type: 'post',
+      data: { sum: display.textContent },
+      success: function (response) {
+        response = 'sum posted successfully';
+        console.log(response);
+      },
+    });
+  });
+});
