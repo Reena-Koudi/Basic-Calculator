@@ -15,31 +15,41 @@
 	$no_rows = ($no_rows - 1) + 1;
 	}
 
-fputcsv($file_open, $form_data);
+ if(fputcsv($file_open,$form_data ))
+	{
 
-if (($handle= fopen("sum.csv", "r")) !== FALSE) 
-{
-  echo '<table>';
-  echo '<tr>';
-  echo '<th>Expression</th>';
-  echo '<th>IP</th>';
-  echo '<th>Date</th>';
-  echo '<th>Browser</th>';
-  echo '</tr>';
-  
-  while (($data = fgetcsv($handle,0, ",")) !== FALSE) 
-  {	
-    echo '<tr>';
-    echo '<th>'.$data[0].'</th>';
-    echo '<th>'.$data[1].'</th>';
-    echo '<th>'.$data[2].'</th>';
-    echo '<th>'.$data[3].'</th>';
-    echo '</tr>';
-  }
-  echo '</table>';
+	$rows = array();
 
-  // Close the file
-	fclose($handle);
-}
+    if (($handle = fopen('sum.csv', "r")) !== FALSE) {
+
+        while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
+						array_push($rows, $data);
+        }
+        fclose($handle);
+    }
+		
+	$array_data = array_reverse($rows);
+	$output = '';
+	$output .= '<table>
+	             <thead>
+                <tr>
+						      <th>DATA</th>
+                  <th>IP</th>
+						      <th>DATE</th>
+					       	<th>BROWSER</th>
+								</tr>
+							</thead>
+						<table>'; 
+	foreach ($array_data as $ar ){
+			$output .= '<tr>
+						<td>'.$ar[0].'</td>
+						<td>'.$ar[1].'</td>
+						<td>'.$ar[2].'</td>
+						<td>'.$ar[3].'</td> </tr>';
+			}
+	echo $output;
+	}else {
+		echo "error, Please close the file";
+	}
 ?>
     
