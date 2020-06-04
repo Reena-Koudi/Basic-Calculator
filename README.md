@@ -6,7 +6,7 @@ A simple calculator with the user history management
 
 - Fork this repo, and clone to your local machine.
 
-- I have setup and congigured the webpack. At the moment it doesn't work as expected, hence I have tried running the project on the local php-server.
+- Webpack installation and setup done to run a webserver. Currently php files not supported hence I've tried running the project on the local php-server.
 
 - Run the php server in your local machine and go to the localhost.
 
